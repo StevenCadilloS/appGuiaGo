@@ -1,7 +1,6 @@
-/* styles.css */
+  /* styles.css */
 
-/* Estilos generales */
-:root {
+  :root {
     --primary-blue: #179cb3;
     --primary-green: #4ddcb1;
     --primary-dark: #102d42;
@@ -17,320 +16,552 @@
     --gray-800: #1f2937;
     --shadow: 0 4px 6px rgba(16, 45, 66, 0.15);
   }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    body {
+      background-image: url("motorboat-lake-surrounded-by-beautiful-green-trees-cloudy-sky.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: var(--text-dark);
+      min-height: 100vh; /* Establece la altura mínima al 100% de la ventana */
+      display: flex;
+      flex-direction: column;
   }
-  
-  body {
-    background: linear-gradient(to right, var(--background-light) 50%, var(--background-green) 50%);
-    color: var(--text-dark);
-  }
-  
-  header {
-    background-color: white;
-    box-shadow: var(--shadow);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  
-  .logo-text {
-    font-size: 2rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
-    /* Propiedades estándar y con prefijos */
-  background-clip: text; /* Propiedad estándar */
-  -webkit-background-clip: text; /* Prefijo para navegadores WebKit (Chrome, Safari) */
-  color: transparent; /* Hace el texto transparente para mostrar el gradiente */
-  -webkit-text-fill-color: transparent; /* Prefijo para navegadores WebKit */
-    -webkit-text-fill-color: transparent;
-    text-decoration: none;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    padding: 0.5rem 0;
-    position: relative;
-  }
-  
-  nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
-    transition: width 0.3s;
-  }
-  
-  nav a:hover::after {
-    width: 100%;
-  }
-  
-  .auth-buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .btn {
-    padding: 0.5rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.3s;
-    border: none;
-  }
-  
-  .btn-outline {
-    border: 2px solid var(--primary-blue);
-    color: var(--primary-blue);
-    background: transparent;
-  }
-  
-  .btn-outline:hover {
-    background-color: var(--primary-blue);
-    color: white;
-  }
-  
-  .btn-primary {
-    background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
-    color: white;
-  }
-  
-  .btn-primary:hover {
-    box-shadow: 0 5px 15px rgba(23, 156, 179, 0.4);
-    transform: translateY(-2px);
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  /* Estilos para la sección "Lo que dicen nuestros viajeros" */
-  .testimonials {
-    padding: 4rem 0;
-    background-color: var(--background-green);
-  }
-  
-  .testimonial-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .testimonial-card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(16, 45, 66, 0.2);
-  }
-  
-  .testimonial-avatar {
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-    border: 3px solid var(--primary-green);
-  }
-  
-  .testimonial-content {
-    flex: 1;
-  }
-  
-  .testimonial-text {
-    color: var(--gray-600);
-    margin-bottom: 1rem;
-    font-style: italic;
-  }
-  
-  .testimonial-author {
-    font-weight: 600;
-    color: var(--primary-dark);
-    margin-bottom: 0.5rem;
-  }
-  
-  .testimonial-rating {
-    color: #ffc107; /* Color dorado para las estrellas */
-    font-size: 1.25rem;
-  }
-  
-  /* Estilos para el footer y "Enlaces rápidos" */
-  footer {
-    background: linear-gradient(90deg, var(--primary-dark), #1a3d56);
-    color: white;
-    padding: 4rem 0 2rem;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  
-  .footer-column {
-    flex: 1;
-  }
-  
-  .footer-logo {
-    font-size: 2rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
-    /* Propiedades estándar y con prefijos */
-  background-clip: text; /* Propiedad estándar */
-  -webkit-background-clip: text; /* Prefijo para navegadores WebKit (Chrome, Safari) */
-  color: transparent; /* Hace el texto transparente para mostrar el gradiente */
-  -webkit-text-fill-color: transparent; /* Prefijo para navegadores WebKit */
-    -webkit-text-fill-color: transparent;
-    text-decoration: none;
-    margin-bottom: 1.5rem;
-    display: block;
-  }
-  
-  .footer-column h3 {
-    color: var(--primary-green);
-    margin-bottom: 1.5rem;
-    font-size: 1.25rem;
-    position: relative;
-    padding-bottom: 0.5rem;
-  }
-  
-  .footer-column h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
-    border-radius: 3px;
-  }
-  
-  .footer-description {
-    color: var(--gray-400);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  .footer-links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 1rem;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .footer-links a::before {
-    content: '➜';
-    color: var(--primary-green);
-    transition: transform 0.3s;
-  }
-  
-  .footer-links a:hover {
-    color: var(--primary-green);
-  }
-  
-  .footer-links a:hover::before {
-    transform: translateX(5px);
+    
+    header {
+      background-color: white;
+      box-shadow: var(--shadow);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    
+    .logo-text {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+      /* Propiedades estándar y con prefijos */
+    background-clip: text; /* Propiedad estándar */
+    -webkit-background-clip: text; /* Prefijo para navegadores WebKit (Chrome, Safari) */
+    color: transparent; /* Hace el texto transparente para mostrar el gradiente */
+    -webkit-text-fill-color: transparent; /* Prefijo para navegadores WebKit */
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      padding: 0.5rem 0;
+      position: relative;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+      transition: width 0.3s;
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    .auth-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .btn {
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s;
+      border: none;
+    }
+    
+    .btn-outline {
+      border: 2px solid var(--primary-blue);
+      color: var(--primary-blue);
+      background: transparent;
+    }
+    
+    .btn-outline:hover {
+      background-color: var(--primary-blue);
+      color: white;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      box-shadow: 0 5px 15px rgba(23, 156, 179, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+      color: black
+    }
+    
+    /* Estilos para la sección "Lo que dicen nuestros viajeros" */
+    .testimonials {
+      padding: 4rem 0;
+      background-color: var(--background-green);
+    }
+    
+    .testimonial-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .testimonial-card {
+      background-color: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(16, 45, 66, 0.2);
+    }
+    
+    .testimonial-avatar {
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 3px solid var(--primary-green);
+    }
+    
+    .testimonial-content {
+      flex: 1;
+    }
+    
+    .testimonial-text {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    .testimonial-rating {
+      color: #ffc107; /* Color dorado para las estrellas */
+      font-size: 1.25rem;
+    }
+    
+    /* Estilos para el footer y "Enlaces rápidos" */
+    footer {
+      background: linear-gradient(90deg, var(--primary-dark), #1a3d56);
+      color: white;
+      padding: 4rem 0 2rem;
+      position: relative;
+      overflow: hidden;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .footer-column {
+      flex: 1;
+    }
+    
+    .footer-logo {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+      /* Propiedades estándar y con prefijos */
+    background-clip: text; /* Propiedad estándar */
+    -webkit-background-clip: text; /* Prefijo para navegadores WebKit (Chrome, Safari) */
+    color: transparent; /* Hace el texto transparente para mostrar el gradiente */
+    -webkit-text-fill-color: transparent; /* Prefijo para navegadores WebKit */
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    
+    .footer-column h3 {
+      color: var(--primary-green);
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+      border-radius: 3px;
+    }
+    
+    .footer-description {
+      color: var(--gray-400);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 1rem;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .footer-links a::before {
+      content: '➜';
+      color: var(--primary-green);
+      transition: transform 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary-green);
+    }
+    
+    .footer-links a:hover::before {
+      transform: translateX(5px);
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh; /* Ocupa toda la altura de la pantalla */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/images/hero-bg.jpg'); /* Imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.5); /* Oscurece la imagen para mejorar la legibilidad */
+      z-index: -1;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+      border-radius: 20px;
+
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--text-light);
+    }
+    
+    .hero .btn {
+      font-size: 1.25rem;
+      padding: 1rem 2.5rem;
+    }
+    .destinos {
+      background-color: rgba(240, 240, 240, 0.5); /* Fondo gris claro semitransparente */
+      padding: 4rem 0;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 50px; /* Añade un margen superior de 50px (puedes ajustar este valor) */
   }
 
-  .hero {
-    position: relative;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
+  .destinos .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
   }
-  
-  .hero::before {
-    content: '';
-    position: absolute;
+
+  .destinos h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+
+  .destinos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+  }
+
+  .destino-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  }
+
+  .destino-card:hover {
+      transform: translateY(-5px);
+  }
+
+  .destino-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .destino-title {
+      padding: 1rem;
+      margin: 0;
+      text-align: center;
+  }
+
+  .destino-description {
+      padding: 0 1rem 1rem;
+      margin: 0;
+      text-align: center;
+  }
+
+  .registro {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/images/hero-bg.jpg'); /* Imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.5); /* Oscurece la imagen para mejorar la legibilidad */
-    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
   }
-  
-  .hero-content {
-    max-width: 800px;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    border-radius: 20px;
+
+  .registro-contenido {
+    background-color: white;
+    padding: 3rem; /* Aumentamos el relleno */
+    border-radius: 15px; /* Bordes más redondeados */
+    width: 450px; /* Aumentamos el ancho */
+    text-align: center;
   }
-  
-  .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.5rem;
+
+  .registro-contenido h2 {
     margin-bottom: 2rem;
-    color: var(--text-light);
+    color: var(--primary-dark);
   }
-  
-  .hero .btn {
-    font-size: 1.25rem;
-    padding: 1rem 2.5rem;
+
+  #registro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Aumentamos el espacio entre los campos */
   }
+
+  #registro-form input {
+    padding: 1rem; /* Aumentamos el relleno de los campos */
+    border: 1px solid var(--gray-300);
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Aumentamos el tamaño de la fuente */
+  }
+
+  #registro-form button {
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+    color: white;
+    padding: 1rem 2rem; /* Aumentamos el relleno del botón */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 1.1rem; /* Aumentamos el tamaño de la fuente del botón */
+    transition: background 0.3s ease;
+  }
+
+  #registro-form button:hover {
+    background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+    transform: translateY(-2px); /* Efecto hover */
+  }
+
+  .how-it-works-detailed {
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0); /* Gradiente de fondo */
+    padding: 4rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.how-it-works-detailed h2, 
+.how-it-works-detailed h3, 
+.how-it-works-detailed p {
+    color: var(--text-dark);
+}
+
+.how-it-works-detailed h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding-bottom: 1rem;
+  font-family: 'TuFuentePreferida', sans-serif; /* Opcional: cambia la fuente */
+}
+
+.how-it-works-detailed h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+}
+
+.step-detailed {
+  background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.step-detailed:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-icon {
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.cta {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+    color: white;
+    padding: 4rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.cta h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.cta p {
+  margin-bottom: 2rem; /* Añade margen inferior */
+}
+.cta .container {
+  padding: 2rem; /* Opcional: añade espacio alrededor del contenido */
+}
+.cta .btn {
+  background: white;
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;/* Opcional: ajusta el tamaño de la fuente del botón */
+}
+
+.cta .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}

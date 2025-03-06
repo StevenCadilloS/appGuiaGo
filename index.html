@@ -1,87 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GuiaGo - Conecta con guías locales</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet"> <!-- Fuentes de Google -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuiaGo - Conecta con guías locales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <a href="#" class="logo-text">GuiaGo</a>
-    <nav>
-      <ul>
-        <li><a href="#hero">Inicio</a></li>
-        <li><a href="como-funciona.html">Cómo funciona</a></li>
-        <li><a href="#guides">Guías</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="auth-buttons">
-      <a href="#" class="btn btn-outline">Iniciar Sesión</a>
-      <a href="#" class="btn btn-primary">Registrarse</a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1>Explora el mundo con GuiaGo</h1>
-      <p class="hero-subtitle">Descubre lugares increíbles, vive experiencias únicas y conéctate con guías locales que te mostrarán lo mejor de cada destino.</p>
-      <a href="#how-it-works" class="btn btn-primary">Comenzar ahora</a>
-    </div>
-  </section>
-
-  <!-- Sección de Destinos Inspiradores -->
-  <section id="destinos" class="destinos">
-    <div class="container">
-      <h2>Destinos que te inspirarán</h2>
-      <div class="destinos-grid">
-        <!-- Destino 1 -->
-        <div class="destino-card">
-          <div class="destino-image" style="background-image: url('assets/images/destino1.jpg');"></div>
-          <h3 class="destino-title">París, Francia</h3>
-          <p class="destino-description">La ciudad del amor te espera con sus icónicos monumentos y su encanto único.</p>
+    <header>
+        <a href="#" class="logo-text">GuiaGo</a>
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="#guides">Guías</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#" class="btn btn-outline">Iniciar Sesión</a>
+            <a href="registro.html" class="btn btn-primary">Registrarse</a>
         </div>
+    </header>
 
-        <!-- Destino 2 -->
-        <div class="destino-card">
-          <div class="destino-image" style="background-image: url('assets/images/destino2.jpg');"></div>
-          <h3 class="destino-title">Kyoto, Japón</h3>
-          <p class="destino-description">Sumérgete en la cultura tradicional japonesa con sus templos y paisajes serenos.</p>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Explora el mundo con GuiaGo</h1>
+            <p class="hero-subtitle">Descubre lugares increíbles, vive experiencias únicas y conéctate con guías locales que te mostrarán lo mejor de cada destino.</p>
+            <a href="registro.html" class="btn btn-primary">Comenzar ahora</a>
         </div>
+    </section>
 
-        <!-- Destino 3 -->
-        <div class="destino-card">
-          <div class="destino-image" style="background-image: url('assets/images/destino3.jpg');"></div>
-          <h3 class="destino-title">Machu Picchu, Perú</h3>
-          <p class="destino-description">Descubre la maravilla del mundo inca en medio de las montañas andinas.</p>
+    <section id="destinos" class="destinos">
+        <div class="container">
+            <h2>Destinos que te inspirarán</h2>
+            <div class="destinos-grid">
+                <div class="destino-card">
+                    <div class="destino-image" style="background-image: url('assets/cusco.jpg');"></div>
+                    <h3 class="destino-title">Cusco</h3>
+                    <p class="destino-description">La capital histórica del Perú, llena de maravillas incas y paisajes impresionantes.</p>
+                </div>
+                <div class="destino-card">
+                    <div class="destino-image" style="background-image: url('assets/arequipa.jpg');"></div>
+                    <h3 class="destino-title">Arequipa</h3>
+                    <p class="destino-description">La Ciudad Blanca, rodeada de volcanes y con una rica historia colonial.</p>
+                </div>
+                <div class="destino-card">
+                    <div class="destino-image" style="background-image: url('assets/loreto.jpeg');"></div>
+                    <h3 class="destino-title">Loreto</h3>
+                    <p class="destino-description">La puerta de entrada a la Amazonía peruana, con una biodiversidad increíble.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-column">
-        <a href="#" class="footer-logo">GuiaGo</a>
-        <p class="footer-description">Conectamos viajeros con guías locales para experiencias únicas.</p>
-      </div>
-      <div class="footer-column">
-        <h3>Enlaces rápidos</h3>
-        <ul class="footer-links">
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="como-funciona.html">Cómo funciona</a></li>
-          <li><a href="#guides">Guías</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    <section id="como-funciona" class="how-it-works-detailed">
+        <div class="container">
+            <h2>Tu aventura, en 3 simples pasos</h2>
+            <div class="steps-detailed">
+    
+                <div class="step-detailed">
+                    <div class="step-icon"><i class="fas fa-map-marker-alt"></i></div> <h3 class="step-title">1. Elige tu destino</h3>
+                    <p class="step-description">
+                        Explora nuestra amplia selección de destinos y elige el lugar que más te inspire. Desde ciudades históricas hasta paisajes naturales, tenemos opciones para todos los gustos.
+                    </p>
+                    <div class="step-image" style="background-image: url('assets/images/destino.jpg');"></div>
+                </div>
+    
+                <div class="step-detailed">
+                    <div class="step-icon"><i class="fas fa-users"></i></div> <h3 class="step-title">2. Encuentra tu guía</h3>
+                    <p class="step-description">
+                        Conéctate con guías locales expertos que conocen cada rincón de tu destino. Lee sus perfiles, reseñas y elige al que mejor se adapte a tus necesidades.
+                    </p>
+                    <div class="step-image" style="background-image: url('assets/images/guia.jpg');"></div>
+                </div>
+    
+                <div class="step-detailed">
+                    <div class="step-icon"><i class="fas fa-check-circle"></i></div> <h3 class="step-title">3. Reserva y paga</h3>
+                    <p class="step-description">
+                        Realiza tu reserva de forma segura y prepárate para vivir una experiencia inolvidable. ¡Tu guía estará listo para recibirte!
+                    </p>
+                    <div class="step-image" style="background-image: url('assets/images/reserva.jpg');"></div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
 
-  <!-- Enlaza el archivo JavaScript -->
-  <script src="script.js"></script>
+    <section class="testimonials">
+        <div class="container">
+            <h2>Lo que dicen nuestros viajeros</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background-image: url('assets/viajero1.avif');"></div>
+                    <p class="testimonial-text">
+                        "Explorar el Valle Sagrado con GuiaGo fue mágico. ¡Los guías locales conocen cada rincón!"
+                    </p>
+                    <p class="testimonial-author">- Sofía Ramírez</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background-image: url('assets/viajero2.avif');"></div>
+                    <p class="testimonial-text">
+                        "La experiencia en la Amazonía peruana fue inolvidable. ¡Gracias a mi guía, vi animales increíbles!"
+                    </p>
+                    <p class="testimonial-author">- Javier Torres</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background-image: url('assets/viajero3.png');"></div>
+                    <p class="testimonial-text">
+                        "Arequipa es hermosa, pero con un guía local de GuiaGo, ¡la disfruté mucho más!"
+                    </p>
+                    <p class="testimonial-author">- Ana Gómez</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>¿Listo para tu próxima aventura?</h2>
+            <p>Encuentra tu guía ideal y comienza a planificar tu viaje hoy mismo.</p>
+            <a href="#guides" class="btn btn-primary">Buscar guías</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <a href="#" class="footer-logo">GuiaGo</a>
+                <p class="footer-description">Conectamos viajeros con guías locales para experiencias únicas.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#como-funciona">Cómo funciona</a></li>
+                    <li><a href="#guides">Guías</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
