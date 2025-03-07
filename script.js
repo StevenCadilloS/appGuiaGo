@@ -1,5 +1,4 @@
 // script.js
-
 // Manejar el envío del formulario de búsqueda
 document.querySelector('.search-form').addEventListener('submit', function (event) {
   event.preventDefault(); // Evita que el formulario se envíe
@@ -11,8 +10,8 @@ document.querySelector('.search-form').addEventListener('submit', function (even
 
   // Validar los campos
   if (!destination || !date || !type) {
-    alert('Por favor, completa todos los campos.');
-    return;
+      alert('Por favor, completa todos los campos.');
+      return;
   }
 
   // Simular una búsqueda (puedes reemplazar esto con una llamada a una API)
