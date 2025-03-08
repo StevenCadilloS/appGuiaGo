@@ -5,52 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil del Guía - GuiaGo</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
+<body class="perfil-guia-body">
     <header>
         <a href="#" class="logo-text">GuiaGo</a>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Explorar Guías</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+                <li><a href="guias.html">Guías</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <div class="auth-buttons">
+            <a href="#" class="btn btn-outline">Iniciar Sesión</a>
+            <a href="registro.html" class="btn btn-primary">Registrarse</a>
+        </div>
     </header>
 
-    <div class="main-content"></class><section class="perfil-guia">
+    <section class="perfil-guia">
         <div class="guia-info">
-            <img src="guia.jpg" alt="Foto del guía" class="guia-foto">
+            <img src="assets/guia.jpg" alt="Foto del guía" class="guia-foto">
             <h1>Juan Pérez</h1>
             <p><strong>Tipo de turismo:</strong> Aventura, Cultura</p>
             <p><strong>Idiomas:</strong> Español, Inglés</p>
             <p><strong>Ubicación:</strong> Amazonas, Perú</p>
             <p><strong>Disponibilidad:</strong> Lunes a Viernes, 8:00 AM - 6:00 PM</p>
             <p class="descripcion">Guía con más de 10 años de experiencia explorando la selva amazónica, compartiendo historias y conectando con la naturaleza.</p>
-            <button id="abrir-chat-guia" class="btn chat-btn">Chatear con el guía</button>
+            <button class="btn chat-btn">Chatear con el guía</button>
         </div>
     </section>
 
     <section class="rutas-guia">
         <h2>Rutas disponibles</h2>
+        <br></br>
         <div class="rutas-container">
             <div class="ruta-card">
                 <h3>Rumbo a Kuelap</h3>
                 <p class="ruta-descripcion">Descubre la impresionante ciudadela preinca, un destino lleno de historia y vistas espectaculares.</p>
                 <p class="personas-icon">👤👤 <span>2</span></p>
-                <button class="btn detalles-btn" onclick="mostrarDetalles('Rumbo a Kuelap', 'Español', '10 de Abril, 8:00 AM', '4:00 PM', '$50', '4', 'Exploración guiada por la ciudadela de Kuelap.', 'mapa1.jpg', 'Fortaleza de Kuelap, Mirador de Kuelap, Centro de Interpretación')">Ver detalles</button>
+                <button class="btn detalles-btn" onclick="mostrarDetalles('Rumbo a Kuelap', 'Español', '10 de Abril, 8:00 AM', '4:00 PM', '$50', '4', 'Exploración guiada por la ciudadela de Kuelap.', 'assets/ruta1.jpg', 'Fortaleza de Kuelap, Mirador de Kuelap, Centro de Interpretación')">Ver detalles</button>
             </div>
             <div class="ruta-card">
                 <h3>Exploración en la Selva</h3>
                 <p class="ruta-descripcion">Una aventura en la selva con avistamiento de fauna y flora, ideal para los amantes de la naturaleza.</p>
                 <p class="personas-icon">👤 <span>1</span></p>
-                <button class="btn detalles-btn" onclick="mostrarDetalles('Exploración en la Selva', 'Inglés', '15 de Abril, 9:00 AM', '3:00 PM', '$40', '3', 'Aventura en la selva con avistamiento de fauna y flora.', 'mapa2.jpg', 'Río Amazonas, Reserva Natural, Comunidad Indígena')">Ver detalles</button>
+                <button class="btn detalles-btn" onclick="mostrarDetalles('Exploración en la Selva', 'Inglés', '15 de Abril, 9:00 AM', '3:00 PM', '$40', '3', 'Aventura en la selva con avistamiento de fauna y flora.', 'assets/ruta2.jpg', 'Río Amazonas, Reserva Natural, Comunidad Indígena')">Ver detalles</button>
             </div>
         </div>
     </section>
 
-    </div>
-    <div id="detalleRuta" class="detalle-overlay">
+    <div id="detalleRuta" class="detalle-overlay" style="display: none;">
         <div class="detalle-contenido">
             <span class="close" onclick="cerrarDetalles()">&times;</span>
             <h3 id="tituloRuta"></h3>
@@ -62,38 +69,50 @@
             <p><strong>Mínimo de personas:</strong> <span id="minimoRuta"></span></p>
             <p><strong>Descripción:</strong> <span id="descripcionRuta"></span></p>
             <p><strong>Itinerario:</strong> <span id="itinerarioRuta"></span></p>
-            <button class="btn comprar-btn" onclick="mostrarFormularioPago()">Comprar</button>
-
-            <div id="formularioPago" style="display: none;">
-                <h3>Detalles de Pago</h3>
-                <form id="formularioPagoTarjeta">
-                    <label for="numeroTarjeta">Número de Tarjeta:</label>
-                    <input type="text" id="numeroTarjeta" name="numeroTarjeta" required><br><br>
-
-                    <label for="fechaVencimiento">Fecha de Vencimiento:</label>
-                    <input type="text" id="fechaVencimiento" name="fechaVencimiento" placeholder="MM/AA" required><br><br>
-
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" required><br><br>
-
-                    <button type="button" class="btn btn-primary" onclick="procesarPago()">Procesar Pago</button>
-                </form>
+            <div class="detalle-botones">
+                <button class="btn unirse-btn">Unirse a ruta compartida</button>
+                <button class="btn privado-btn">Crear grupo privado</button>
             </div>
         </div>
     </div>
-    <div id="chat-guia-container" class="chat-guia-container">
-        <div class="chat-guia-messages" id="chat-guia-messages"></div>
-        <div class="chat-guia-input">
-            <input type="text" id="chat-guia-input-text" placeholder="Escribe tu mensaje...">
-            <button id="chat-guia-send-button" class="btn btn-primary">Enviar</button>
-        </div>
-        <button id="cerrar-chat-guia" class="btn btn-secondary">Cerrar Chat</button>
-    </div>
 
     <footer>
-        <p>&copy; 2025 GuiaGo - Todos los derechos reservados</p>
+        <div class="footer-content">
+            <div class="footer-column">
+                <a href="#" class="footer-logo">GuiaGo</a>
+                <p class="footer-description">Conectamos viajeros con guías locales para experiencias únicas.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+                    <li><a href="guias.html">Guías</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
-    <script src="guiaperfil.js"></script>
+    <script>
+        function mostrarDetalles(titulo, idioma, salida, horaFin, precio, minimo, descripcion, imagen, itinerario) {
+            const modal = document.getElementById('detalleRuta');
+            if (!modal) return;
+            document.getElementById('tituloRuta').innerText = titulo;
+            document.getElementById('idiomaRuta').innerText = idioma;
+            document.getElementById('salidaRuta').innerText = salida;
+            document.getElementById('horaFinRuta').innerText = horaFin;
+            document.getElementById('precioRuta').innerText = precio;
+            document.getElementById('minimoRuta').innerText = minimo;
+            document.getElementById('descripcionRuta').innerText = descripcion;
+            document.getElementById('itinerarioRuta').innerText = itinerario;
+            document.getElementById('imagenRuta').src = imagen;
+            modal.style.display = 'flex';
+        }
+
+        function cerrarDetalles() {
+            const modal = document.getElementById('detalleRuta');
+            if (modal) modal.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
