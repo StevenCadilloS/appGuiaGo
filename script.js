@@ -32,3 +32,40 @@ departamentoSelect.addEventListener('change', () => {
       });
   }
 });
+
+
+const chatGuiaContainer = document.getElementById('chat-guia-container');
+const chatGuiaMessages = document.getElementById('chat-guia-messages');
+const chatGuiaInput = document.getElementById('chat-guia-input-text');
+const chatGuiaSendButton = document.getElementById('chat-guia-send-button');
+const cerrarChatGuia = document.getElementById('cerrar-chat-guia');
+
+document.querySelectorAll('.abrir-chat-guia').forEach(button => {
+    button.addEventListener('click', function() {
+        chatGuiaContainer.style.display = 'flex';
+        const guiaNombre = this.getAttribute('data-guia-nombre');
+        chatGuiaMessages.innerHTML = `<div>Chat con ${guiaNombre}</div>`;
+    });
+});
+
+cerrarChatGuia.addEventListener('click', function() {
+    chatGuiaContainer.style.display = 'none';
+});
+
+chatGuiaSendButton.addEventListener('click', function() {
+    const message = chatGuiaInput.value;
+    if (message.trim() === '') return;
+    displayMessage('usuario', message);
+    setTimeout(function() {
+        displayMessage('guia', '¡Gracias por tu mensaje!');
+    }, 1000);
+    chatGuiaInput.value = '';
+});
+
+function displayMessage(sender, text) {
+    const messageDiv = document.createElement('div');
+    messageDiv.textContent = `${sender}: ${text}`;
+    chatGuiaMessages.appendChild(messageDiv);
+    chatGuiaMessages.scrollTop = chatGuiaMessages.scrollHeight;
+}
+

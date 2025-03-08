@@ -1052,3 +1052,60 @@
   background-color: var(--gray-500);
   color: white;
 }
+
+.chat-guia-container {
+  position: absolute; /* Cambiar a absolute */
+  top: 60px; /* Ajustar la posición debajo del encabezado (ajusta el valor según la altura de tu encabezado) */
+  right: 0;
+  width: 50%;
+  height: calc(100% - 60px); /* Ajustar la altura para que no se superponga al encabezado */
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+}
+
+.chat-guia-messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+
+.chat-guia-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+#chat-guia-input-text {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.perfil-guia, .rutas-guia {
+  transition: width 0.3s ease;
+}
+
+.main-content {
+  transition: width 0.3s ease;
+}
+
+#formularioPago {
+  margin-top: 20px;
+}
+
+#formularioPago label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#formularioPago input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
