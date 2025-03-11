@@ -24,7 +24,17 @@
             <a href="registro.html" class="btn btn-primary">Registrarse</a>
         </div>
     </header>
-
+    <div id="chat-guia-container" class="chat-guia-container" style="display: none;">
+        <div class="chat-guia-header">
+            <h3>Chat con Juan Pérez</h3>
+            <span id="cerrar-chat-guia" style="cursor: pointer;">&times;</span>
+        </div>
+        <div class="chat-guia-messages" id="chat-guia-messages"></div>
+        <div class="chat-guia-input">
+            <input type="text" id="chat-guia-input-text" placeholder="Escribe tu mensaje...">
+            <button id="chat-guia-send-button" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
     <section class="perfil-guia">
         <div class="guia-info">
             <img src="assets/guia.jpg" alt="Foto del guía" class="guia-foto">
@@ -34,7 +44,7 @@
             <p><strong>Ubicación:</strong> Amazonas, Perú</p>
             <p><strong>Disponibilidad:</strong> Lunes a Viernes, 8:00 AM - 6:00 PM</p>
             <p class="descripcion">Guía con más de 10 años de experiencia explorando la selva amazónica, compartiendo historias y conectando con la naturaleza.</p>
-            <button class="btn chat-btn">Chatear con el guía</button>
+            <button id="abrir-chat-guia" class="btn chat-btn">Chatear con el guía</button>
         </div>
     </section>
 
@@ -93,8 +103,8 @@
         </div>
     </footer>
 
-    <script>
-        function mostrarDetalles(titulo, idioma, salida, horaFin, precio, minimo, descripcion, imagen, itinerario) {
+    <script src="guiaperfil.js" >
+        /**function mostrarDetalles(titulo, idioma, salida, horaFin, precio, minimo, descripcion, imagen, itinerario) {
             const modal = document.getElementById('detalleRuta');
             if (!modal) return;
             document.getElementById('tituloRuta').innerText = titulo;
@@ -112,7 +122,8 @@
         function cerrarDetalles() {
             const modal = document.getElementById('detalleRuta');
             if (modal) modal.style.display = 'none';
-        }
+        }*/
+
     </script>
 </body>
 </html>

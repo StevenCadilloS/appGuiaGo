@@ -1170,15 +1170,17 @@ body.modal-open {
 }
 
 .chat-guia-container {
-  position: absolute; /* Cambiar a absolute */
-  top: 60px; /* Ajustar la posición debajo del encabezado (ajusta el valor según la altura de tu encabezado) */
-  right: 0;
-  width: 50%;
-  height: calc(100% - 60px); /* Ajustar la altura para que no se superponga al encabezado */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px; /* Ancho fijo */
+  max-height: 400px;
   background-color: white;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: none;
   flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .chat-guia-messages {

@@ -11,7 +11,7 @@ const mainContent = document.querySelector('.main-content');
 abrirChatGuia.addEventListener('click', function() {
     chatGuiaContainer.style.display = 'flex';
     chatGuiaMessages.innerHTML = `<div>Chat con Juan Pérez</div>`;
-    mainContent.style.width = '50%'; // Reducir el ancho del contenedor principal
+    mainContent.style.width = 'calc(100% - 320px)'; // Reducir el ancho del contenedor principal
 });
 
 cerrarChatGuia.addEventListener('click', function() {
