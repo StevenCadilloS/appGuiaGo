@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guías Locales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-text">GuiaGo</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="guias.html">Guías</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons logged-in">
+            <a href="" class="btn btn-primary">Mis tours</a>
+            <a href="chat.html" class="btn btn-primary">Chat</a>
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+            <span class="user-name">Juan Perez</span>  
+        </div>
+    </header>
+    <section id="guias-locales" class="guias-locales">
+        <div class="container">
+            <h2>Encuentra tu Guía Ideal</h2>
+
+            <div class="filtros">
+                <h3>Filtrar por:</h3>
+
+                <div class="filtro">
+                    <label for="tipo-turismo">Tipo de Turismo:</label>
+                    <select id="tipo-turismo">
+                        <option value="">Todos</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="gastronomico">Gastronómico</option>
+                        <option value="naturaleza">Naturaleza</option>
+                    </select>
+                </div>
+
+                <div class="filtro">
+                    <label for="departamento">Departamento:</label>
+                    <select id="departamento">
+                        <option value="">Todos</option>
+                        <option value="cusco">Cusco</option>
+                        <option value="arequipa">Arequipa</option>
+                        <option value="loreto">Loreto</option>
+                        <option value="ancash">Áncash</option>
+                        <option value="piura">Piura</option>
+                        <option value="lambayeque">Lambayeque</option>
+                    </select>
+                </div>
+
+                <div class="filtro">
+                    <label for="ciudad">Ciudad:</label>
+                    <select id="ciudad">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+
+                <div class="filtro">
+                    <label for="disponibilidad-fecha">Disponibilidad (Fecha):</label>
+                    <input type="date" id="disponibilidad-fecha">
+                </div>
+
+                <div class="filtro">
+                    <label for="disponibilidad-hora">Disponibilidad (Hora):</label>
+                    <select id="disponibilidad-hora">
+                        <option value="">Todas</option>
+                        <option value="08:00">08:00</option>
+                        <option value="08:30">08:30</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                    </select>
+                </div>
+
+                <div class="filtro">
+                    <label>Idiomas:</label>
+                    <div class="idiomas-checkboxes">
+                        <label><input type="checkbox" name="idiomas" value="espanol"> Español</label>
+                        <label><input type="checkbox" name="idiomas" value="ingles"> Inglés</label>
+                        <label><input type="checkbox" name="idiomas" value="quechua"> Quechua</label>
+                        <label><input type="checkbox" name="idiomas" value="aymara"> Aymara</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lista-guias">
+                <div class="guia-card">
+                    <img src="assets/guia.jpg" alt="Guía 1" class="guia-imagen">
+                    <div class="guia-info">
+                        <h3>Juan Pérez</h3>
+                        <p>Tipo de Turismo: Aventura, cultura</p>
+                        <p>Idiomas: Español, Inglés</p>
+                        <a href="perfilguias_actualizado.html">
+                            <button class="btn btn-primary ver-perfil" data-guia-id="1">Ver perfil y rutas</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="guia-card">
+                    <img src="assets/guia2.jpg" alt="Guía 2" class="guia-imagen">
+                    <div class="guia-info">
+                        <h3>Nombre del Guía 2</h3>
+                        <p>Tipo de Turismo: Cultural</p>
+                        <p>Idiomas: Español, Quechua</p>
+                        <button class="btn btn-primary ver-perfil" data-guia-id="2">Ver perfil y rutas</button>
+                    </div>
+                </div>
+
+                <div class="guia-card">
+                    <img src="assets/guia3.jpg" alt="Guía 3" class="guia-imagen">
+                    <div class="guia-info">
+                        <h3>Nombre del Guía 3</h3>
+                        <p>Tipo de Turismo: Gastronómico</p>
+                        <p>Idiomas: Español, Aymara</p>
+                        <button class="btn btn-primary ver-perfil" data-guia-id="3">Ver perfil y rutas</button>
+                    </div>
+                </div>
+
+                <div class="guia-card">
+                    <img src="assets/guia4.jpg" alt="Guía 4" class="guia-imagen">
+                    <div class="guia-info">
+                        <h3>Nombre del Guía 4</h3>
+                        <p>Tipo de Turismo: Naturaleza</p>
+                        <p>Idiomas: Español, Inglés</p>
+                        <button class="btn btn-primary ver-perfil" data-guia-id="4">Ver perfil y rutas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - GuiaGo</title>
-    <link rel="stylesheet" href="styles.css"> </head>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <header>
+    <header id="main-header">
         <a href="index.html" class="logo-text">GuiaGo</a>
         <nav>
             <ul>
@@ -16,22 +17,15 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <div class="auth-buttons">
-            <a href="#" class="btn btn-outline">Iniciar Sesión</a>
-            <a href="registro.html" class="btn btn-primary">Registrarse</a>
-        </div>
     </header>
-    <section class="registro">
+    <section class="registro" id="registro-section">
         <div class="registro-contenido">
             <h2>Regístrate en GuiaGo</h2>
-            <form id="registro-form">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <form id="registro-form" action="index_actualizado.html"> <input type="text" id="registro-nombre" name="nombre" placeholder="Nombre" required>
                 <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
                 <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
                 <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
-            <a href ="index.html">
-                <button type="submit" class="btn btn-primary" >Registrarse</button>
-            </a>               
+                <button type="submit" class="btn btn-primary">Registrarse</button>
             </form>
         </div>
     </section>

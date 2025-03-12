@@ -1227,3 +1227,103 @@ body.modal-open {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Ajusta el padding según sea necesario */
+  /* Otros estilos del header que ya tengas */
+}
+
+.auth-buttons.logged-in {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre los elementos */
+}
+
+.avatar {
+  width: 30px; /* Ajusta el tamaño del avatar según sea necesario */
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.btn.btn-primary {
+  background-color: #007bff; /* Color del botón */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn.btn-primary:hover {
+  background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+.chat-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-list {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.chat-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.chat-item:hover {
+  background-color: #f0f0f0;
+}
+
+.chat-messages {
+  padding: 10px;
+  height: 250px;
+  overflow-y: auto;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 8px;
+}
+
+.chat-input button {
+  padding: 8px 16px;
+}
+
+
+
+

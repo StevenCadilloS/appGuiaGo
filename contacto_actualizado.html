@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - GuiaGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-text">GuiaGo</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="guias.html">Guías</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons logged-in">
+            <a href="chat.html" class="btn btn-primary">Chat</a>
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+            <span class="user-name">Juan Perez</span>  
+        </div>
+    </header>
+
+    <section class="contacto">
+        <div class="contacto-contenido">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna pregunta o comentario? ¡Escríbenos y te responderemos lo antes posible!</p>
+            <form id="contacto-form">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <button id="abrir-chat" class="chat-flotante">
+        <i class="fas fa-comment-dots"></i>
+        <span class="chat-estado en-linea"></span>
+        Chat en vivo
+    </button>
+    
+    <div id="modal-chat" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input-text" placeholder="Escribe tu mensaje...">
+                    <button id="chat-send-button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <a href="index.html" class="footer-logo">GuiaGo</a>
+                <p class="footer-description">Conectamos viajeros con guías locales para experiencias únicas.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+                    <li><a href="guias.html">Guías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="chat.js"></script>
+</body>
+</html>
