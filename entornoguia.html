@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Guía - GuiaGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body class="perfil-guia-body">
+    <header>
+        <a href="#" class="logo-text">GuiaGo</a>
+        <nav>
+            <ul>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Rutas</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="perfil-guia">
+        <div class="guia-info">
+            <img src="assets/guia.jpg" alt="Foto del guía" class="guia-foto">
+            <h1>Juan Pérez</h1>
+            <p><strong>Correo electrónico:</strong> juan.perez@ejemplo.com</p>
+            <p><strong>Teléfono:</strong> 123-456-7890</p>
+            <p><strong>Tipo de turismo:</strong> Aventura, Cultura</p>
+            <p><strong>Idiomas:</strong> Español, Inglés</p>
+            <p><strong>Ubicación:</strong> Amazonas, Perú</p>
+            <p><strong>Disponibilidad:</strong> Lunes a Viernes, 8:00 AM - 6:00 PM</p>
+            <p class="descripcion">Guía con más de 10 años de experiencia explorando la selva amazónica, compartiendo historias y conectando con la naturaleza.</p>
+            <button id="editar-perfil" class="btn btn-primary">Editar perfil</button>
+        </div>
+    </section>
+
+    <section class="rutas-guia">
+        <h2>Mis rutas</h2>
+        <button id="crear-ruta" class="btn btn-secondary">Crear nueva ruta</button>
+        <div class="rutas-container">
+            <div class="ruta-card">
+                <h3>Rumbo a Kuelap</h3>
+                <p class="ruta-descripcion">Descubre la impresionante ciudadela preinca...</p>
+                <p>Precio: $50</p>
+                <button class="btn editar-ruta">Editar ruta</button>
+                <button class="btn eliminar-ruta">Eliminar ruta</button>
+            </div>
+            <div class="ruta-card">
+                <h3>Exploración en la Selva</h3>
+                <p class="ruta-descripcion">Una aventura en la selva con avistamiento de fauna...</p>
+                <p>Precio: $40</p>
+                <button class="btn editar-ruta">Editar ruta</button>
+                <button class="btn eliminar-ruta">Eliminar ruta</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="formulario-perfil" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar perfil</h2>
+            <form id="form-editar-perfil">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="Juan Pérez"><br>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" value="juan.perez@ejemplo.com"><br>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" value="123-456-7890"><br>
+                <label for="tipo-turismo">Tipo de turismo:</label>
+                <input type="text" id="tipo-turismo" name="tipo-turismo" value="Aventura, Cultura"><br>
+                <label for="idiomas">Idiomas:</label>
+                <input type="text" id="idiomas" name="idiomas" value="Español, Inglés"><br>
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion" value="Amazonas, Perú"><br>
+                <label for="disponibilidad">Disponibilidad:</label>
+                <input type="text" id="disponibilidad" name="disponibilidad" value="Lunes a Viernes, 8:00 AM - 6:00 PM"><br>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion">Guía con más de 10 años de experiencia explorando la selva amazónica, compartiendo historias y conectando con la naturaleza.</textarea><br>
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="formulario-ruta" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Crear nueva ruta</h2>
+            <form id="form-crear-ruta">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo"><br>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion"></textarea><br>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio"><br>
+                <label for="duracion">Duración:</label>
+                <input type="text" id="duracion" name="duracion"><br>
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion"><br>
+                <div id="mapa" style="height: 300px; width: 100%;"></div>
+                <label>Ciudades seleccionadas:</label>
+                <ul id="ciudades-seleccionadas"></ul>
+                <button type="submit" class="btn btn-secondary">Guardar ruta</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Mapa de Leaflet
+        let map;
+        let markers = [];
+
+        // Abrir modal de edición de perfil
+        document.getElementById("editar-perfil").addEventListener("click", function() {
+            document.getElementById("formulario-perfil").style.display = "block";
+        });
+
+        // Abrir modal de creación de ruta
+        document.getElementById("crear-ruta").addEventListener("click", function() {
+            document.getElementById("formulario-ruta").style.display = "block";
+            initMap();
+        });
+
+        // Cerrar modales
+        document.querySelectorAll(".close").forEach(function(closeBtn) {
+        closeBtn.addEventListener("click", function() {
+            this.closest(".modal").style.display = "none";
+        });
+        });
+
+        // Cerrar modales al hacer clic fuera del modal
+        window.addEventListener("click", function(event) {
+            if (event.target.classList.contains("modal")) {
+                event.target.style.display = "none";
+            }
+        })
+        // Inicializar el mapa
+        function initMap() {
+            if (!map) {
+                map = L.map('mapa').setView([-6.8699697, -75.0458515], 5); // Coordenadas iniciales (Perú)
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+
+                map.on('click', function(e) {
+                    let marker = L.marker(e.latlng).addTo(map);
+                    markers.push(marker);
+                    updateSelectedCities(e.latlng);
+                });
+            }
+        }
+
+        // Actualizar la lista de ciudades seleccionadas
+        function updateSelectedCities(latlng) {
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latlng.lat}&lon=${latlng.lng}`)
+                .then(response => response.json())
+                .then(data => {
+                    let city = data.address.city || data.address.town || data.address.village;
+                    if (city) {
+                        let list = document.getElementById("ciudades-seleccionadas");
+                        let li = document.createElement("li");
+                        li.textContent = city;
+                        list.appendChild(li);
+                    }
+                });
+        }
+
+        // Guardar cambios en el perfil
+        document.getElementById("form-editar-perfil").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Perfil actualizado correctamente.");
+            document.getElementById("formulario-perfil").style.display = "none";
+        });
+
+        // Guardar nueva ruta
+        document.getElementById("form-crear-ruta").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Ruta creada correctamente.");
+            document.getElementById("formulario-ruta").style.display = "none";
+        });
+    });
+        
+    </script>
+</body>
+</html>
