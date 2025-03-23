@@ -1405,3 +1405,177 @@ header {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Estilos para la sección de conversaciones */
+.conversations-body {
+  background-color: var(--background-light);
+}
+
+/* Contenedor de conversaciones */
+.conversations-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Barra lateral con lista de conversaciones */
+.conversations-sidebar {
+  width: 30%;
+  background: white;
+  padding: 1rem;
+  border-right: 2px solid var(--gray-300);
+}
+
+.conversations-sidebar h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--primary-dark);
+}
+
+.conversations-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.conversation-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.conversation-item:hover, .conversation-item.active {
+  background: var(--primary-light);
+}
+
+.conversation-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.conversation-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.conversation-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+}
+
+/* Área principal de la conversación */
+.conversations-main {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 1rem;
+}
+
+.conversations-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--gray-300);
+}
+
+.conversations-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.conversations-messages {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 5px 0;
+  max-width: 70%;
+  font-size: 0.9rem;
+}
+
+/* Mensajes del turista */
+.message.turista {
+  background: var(--primary-light);
+  align-self: flex-start;
+}
+
+/* Mensajes del guía */
+.message.guia {
+  background: var(--primary-green);
+  color: white;
+  align-self: flex-end;
+}
+
+/* Input de la conversación */
+.conversations-input {
+  display: flex;
+  border-top: 2px solid var(--gray-300);
+  padding: 10px;
+}
+
+.conversations-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--gray-400);
+  border-radius: 5px;
+}
+
+.conversations-input button {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para la sección de mis tours */
+.tours-body {
+  background-color: var(--background-light);
+}
+
+.mis-tours {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.tour-card {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tour-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tour-info {
+  text-align: left;
+  flex: 1;
+}

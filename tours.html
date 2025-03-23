@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - GuíaGo</title>
+    <title>Mis Tours - GuíaGo</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
+<body class="tours-body">
     <header>
         <a href="index_actualizado.html" class="logo-text">GuíaGo</a>
         <nav>
@@ -20,41 +21,39 @@
         </nav>
         <div class="auth-buttons logged-in">
             <a href="chat.html" class="btn btn-primary">Chat</a>
-            <a href="tours.html" class="btn btn-primary">Mis tours</a>
             <img src="avatar.jpg" alt="Avatar" class="avatar">
             <span class="user-name">Juan Pérez</span>  
         </div>
     </header>
 
-    <section class="contacto">
-        <div class="contacto-contenido">
-            <h2>Contáctanos</h2>
-            <p>¿Tienes alguna pregunta o comentario? ¡Escríbenos y te responderemos lo antes posible!</p>
-            <form id="contacto-form">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
-                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-            </form>
+    <section class="mis-tours">
+        <h2>Mis Tours Adquiridos</h2>
+        <div class="tour-card">
+            <img src="assets/ruta1.jpg" alt="Imagen del tour" class="tour-img">
+            <div class="tour-info">
+                <h3>Rumbo a Kuélap</h3>
+                <p><strong>Guía:</strong> Juan Pérez</p>
+                <p><strong>Idioma:</strong> Español</p>
+                <p><strong>Fecha y Hora:</strong> 10 de Abril, 8:00 AM - 4:00 PM</p>
+                <p><strong>Precio:</strong> $50</p>
+                <p><strong>Punto de Encuentro:</strong> Plaza principal de Chachapoyas</p>
+                <button class="btn detalles-btn" onclick="document.getElementById('detalleRuta').style.display='flex'">Ver detalles</button>
+            </div>
         </div>
     </section>
 
-    <button id="abrir-chat" class="chat-flotante">
-        <i class="fas fa-comment-dots"></i>
-        <span class="chat-estado en-linea"></span>
-        Chat en vivo
-    </button>
-    
-    <div id="modal-chat" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar-modal">&times;</span>
-            <div class="chat-container">
-                <div class="chat-messages" id="chat-messages"></div>
-                <div class="chat-input">
-                    <input type="text" id="chat-input-text" placeholder="Escribe tu mensaje...">
-                    <button id="chat-send-button" class="btn btn-primary">Enviar</button>
-                </div>
-            </div>
+    <div id="detalleRuta" class="detalle-overlay">
+        <div class="detalle-contenido">
+            <span class="close" onclick="document.getElementById('detalleRuta').style.display='none'">&times;</span>
+            <h3>Rumbo a Kuélap</h3>
+            <img src="assets/ruta1.jpg" alt="Mapa de la ruta" class="imagen-detalle">
+            <p><strong>Guía:</strong> Juan Pérez</p>
+            <p><strong>Idioma:</strong> Español</p>
+            <p><strong>Fecha y Hora:</strong> 10 de Abril, 8:00 AM - 4:00 PM</p>
+            <p><strong>Precio:</strong> $50</p>
+            <p><strong>Punto de Encuentro:</strong> Plaza principal de Chachapoyas</p>
+            <p><strong>Descripción:</strong> Exploración guiada por la ciudadela de Kuélap.</p>
+            <p><strong>Itinerario:</strong> Fortaleza de Kuélap, Mirador de Kuélap, Centro de Interpretación</p>
         </div>
     </div>
 
@@ -75,7 +74,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="chat.js"></script>
 </body>
 </html>

@@ -20,7 +20,7 @@
             </ul>
         </nav>
         <div class="auth-buttons logged-in">
-            <a href="" class="btn btn-primary">Mis tours</a>
+            <a href="tours.html" class="btn btn-primary">Mis tours</a>
             <a href="chat.html" class="btn btn-primary">Chat</a>
             <img src="avatar.jpg" alt="Avatar" class="avatar">
             <span class="user-name">Juan Perez</span>  
@@ -58,13 +58,13 @@
                 <h3>Rumbo a Kuélap</h3>
                 <p class="ruta-descripcion">Descubre la impresionante ciudadela preinca, un destino lleno de historia y vistas espectaculares.</p>
                 <p class="personas-icon">👤👤 <span>2</span></p>
-                <button class="btn detalles-btn" onclick="mostrarDetalles('Rumbo a Kuélap', 'Español', '10 de Abril, 8:00 AM', '4:00 PM', '$50', '4', 'Exploración guiada por la ciudadela de Kuélap.', 'assets/ruta1.jpg', 'Fortaleza de Kuélap, Mirador de Kuélap, Centro de Interpretación')">Ver detalles</button>
+                <button class="btn detalles-btn" onclick="mostrarDetalles('Rumbo a Kuélap', 'Español', '10 de Abril, 8:00 AM', '4:00 PM', '$50', '2/6', 'Exploración guiada por la ciudadela de Kuélap.', 'assets/ruta1.jpg', 'Fortaleza de Kuélap, Mirador de Kuélap, Centro de Interpretación', 'Plaza principal de Chachapoyas')">Ver detalles</button>
             </div>
             <div class="ruta-card">
                 <h3>Exploración en la Selva</h3>
                 <p class="ruta-descripcion">Una aventura en la selva con avistamiento de fauna y flora, ideal para los amantes de la naturaleza.</p>
                 <p class="personas-icon">👤 <span>1</span></p>
-                <button class="btn detalles-btn" onclick="mostrarDetalles('Exploración en la Selva', 'Inglés', '15 de Abril, 9:00 AM', '3:00 PM', '$40', '3', 'Aventura en la selva con avistamiento de fauna y flora.', 'assets/ruta2.jpg', 'Río Amazonas, Reserva Natural, Comunidad Indígena')">Ver detalles</button>
+                <button class="btn detalles-btn" onclick="mostrarDetalles('Exploración en la Selva', 'Inglés', '15 de Abril, 9:00 AM', '3:00 PM', '$40', '1/8', 'Aventura en la selva con avistamiento de fauna y flora.', 'assets/ruta2.jpg', 'Río Amazonas, Reserva Natural, Comunidad Indígena', 'Puerto de Iquitos')">Ver detalles</button>
             </div>
         </div>
     </section>
@@ -78,12 +78,13 @@
             <p><strong>Salida:</strong> <span id="salidaRuta"></span></p>
             <p><strong>Hora Fin:</strong> <span id="horaFinRuta"></span></p>
             <p><strong>Precio:</strong> <span id="precioRuta"></span></p>
-            <p><strong>Mínimo de personas:</strong> <span id="minimoRuta"></span></p>
+            <p><strong>Cupos disponibles:</strong> <span id="cuposRuta"></span></p>
             <p><strong>Descripción:</strong> <span id="descripcionRuta"></span></p>
             <p><strong>Itinerario:</strong> <span id="itinerarioRuta"></span></p>
+            <p><strong>Punto de Encuentro:</strong> <span id="puntoEncuentroRuta"></span></p>
             <div class="detalle-botones">
-                <button class="btn unirse-btn">Unirse a ruta compartida</button>
-                <button class="btn privado-btn">Crear grupo privado</button>
+                <button class="btn unirse-btn">Grupo compartido</button>
+                <button class="btn privado-btn">Grupo privado</button>
             </div>
         </div>
     </div>
@@ -100,6 +101,7 @@
                     <li><a href="index_actualizado.html">Inicio</a></li>
                     <li><a href="index_actualizado.html#como-funciona">Cómo funciona</a></li>
                     <li><a href="guias_actualizado.html">Guías</a></li>
+                    <li><a href="contacto_actualizado.html">Contacto</a></li>
                 </ul>
             </div>
         </div>

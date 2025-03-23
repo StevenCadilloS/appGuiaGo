@@ -36,7 +36,7 @@ function displayMessage(sender, text) {
     chatGuiaMessages.scrollTop = chatGuiaMessages.scrollHeight;
 }
 
-function mostrarDetalles(titulo, idioma, salida, horaFin, precio, cupos, descripcion, imagen, itinerario) {
+function mostrarDetalles(titulo, idioma, salida, horaFin, precio, cupos, descripcion, imagen, itinerario, puntoEncuentro) {
     document.getElementById('tituloRuta').innerText = titulo;
     document.getElementById('idiomaRuta').innerText = idioma;
     document.getElementById('salidaRuta').innerText = salida;
@@ -45,6 +45,7 @@ function mostrarDetalles(titulo, idioma, salida, horaFin, precio, cupos, descrip
     document.getElementById('cuposRuta').innerText = cupos;
     document.getElementById('descripcionRuta').innerText = descripcion;
     document.getElementById('itinerarioRuta').innerText = itinerario;
+    document.getElementById('puntoEncuentroRuta').innerText = puntoEncuentro;
     document.getElementById('imagenRuta').src = imagen;
     document.getElementById('detalleRuta').style.display = 'flex';
 }

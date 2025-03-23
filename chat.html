@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversaciones - GuíaGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="conversations-body">
+    <header>
+        <a href="index_actualizado.html" class="logo-text">GuíaGo</a>
+        <nav>
+            <ul>
+                <li><a href="index_actualizado.html">Inicio</a></li>
+                <li><a href="index_actualizado.html#como-funciona">Cómo funciona</a></li>
+                <li><a href="guias_actualizado.html">Guías</a></li>
+                <li><a href="contacto_actualizado.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons logged-in">
+            <a href="tours.html" class="btn btn-primary">Mis tours</a>
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+            <span class="user-name">Juan Perez</span>  
+        </div>
+    </header>
+
+    <section class="conversations-container">
+        <div class="conversations-sidebar">
+            <h2>Mis Conversaciones</h2>
+            <div class="conversations-list">
+                <div class="conversation-item active">
+                    <img src="assets/turista1.jpg" alt="Turista" class="conversation-avatar">
+                    <div class="conversation-info">
+                        <h4>Andrea Gómez</h4>
+                        <p>Gracias por la información...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conversations-main">
+            <div class="conversations-header">
+                <img src="assets/turista1.jpg" alt="Turista" class="conversation-avatar">
+                <h3>Andrea Gómez</h3>
+            </div>
+            <div class="conversations-messages">
+                <div class="message turista">¡Hola! Quisiera saber si aún hay cupos para la ruta de Kuélap.</div>
+                <div class="message guia">¡Hola Andrea! Sí, todavía tenemos 4 cupos disponibles.</div>
+                <div class="message turista">¡Genial! ¿Desde dónde es el punto de encuentro?</div>
+                <div class="message guia">El punto de encuentro es en la Plaza Principal de Chachapoyas.</div>
+                <div class="message turista">Perfecto, ¡nos vemos pronto!</div>
+            </div>
+            <div class="conversations-input">
+                <input type="text" placeholder="Escribe un mensaje...">
+                <button class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <a href="index.html" class="footer-logo">GuíaGo</a>
+                <p class="footer-description">Conectamos viajeros con guías locales para experiencias únicas.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+                    <li><a href="guias.html">Guías</a></li>
+                    <li><a href="contacto_actualizado.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
