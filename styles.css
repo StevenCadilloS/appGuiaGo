@@ -1579,3 +1579,43 @@ header {
   text-align: left;
   flex: 1;
 }
+
+/* Estilos específicos para el modal de perfil */
+.perfil-modal .perfil-content {
+  text-align: left;
+  width: 80%;
+  max-width: 500px;
+}
+
+/* Estilos específicos para el modal de crear ruta */
+.ruta-modal .ruta-content {
+  text-align: left;
+  width: 80%;
+  max-width: 500px;
+}
+
+/* Ajustes de los inputs y botones */
+.perfil-modal input,
+.perfil-modal textarea,
+.ruta-modal input,
+.ruta-modal textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.perfil-modal button,
+.ruta-modal button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Estilo para el mapa dentro del modal de rutas */
+.mapa-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 1rem;
+}

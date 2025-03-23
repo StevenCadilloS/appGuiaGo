@@ -58,8 +58,8 @@
         </div>
     </section>
 
-    <div id="formulario-perfil" class="modal" style="display: none;">
-        <div class="modal-content">
+    <div id="formulario-perfil" class="modal perfil-modal" style="display: none;">
+        <div class="modal-content perfil-content">
             <span class="close">&times;</span>
             <h2>Editar perfil</h2>
             <form id="form-editar-perfil">
@@ -78,14 +78,14 @@
                 <label for="disponibilidad">Disponibilidad:</label>
                 <input type="text" id="disponibilidad" name="disponibilidad" value="Lunes a Viernes, 8:00 AM - 6:00 PM"><br>
                 <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion">Guía con más de 10 años de experiencia explorando la selva amazónica, compartiendo historias y conectando con la naturaleza.</textarea><br>
+                <textarea id="descripcion" name="descripcion">Guía con más de 10 años de experiencia explorando la selva amazónica.</textarea><br>
                 <button type="submit" class="btn btn-primary">Guardar cambios</button>
             </form>
         </div>
     </div>
 
-    <div id="formulario-ruta" class="modal" style="display: none;">
-        <div class="modal-content">
+    <div id="formulario-ruta" class="modal ruta-modal" style="display: none;">
+        <div class="modal-content ruta-content">
             <span class="close">&times;</span>
             <h2>Crear nueva ruta</h2>
             <form id="form-crear-ruta">
@@ -99,7 +99,7 @@
                 <input type="text" id="duracion" name="duracion"><br>
                 <label for="ubicacion">Ubicación:</label>
                 <input type="text" id="ubicacion" name="ubicacion"><br>
-                <div id="mapa" style="height: 300px; width: 100%;"></div>
+                <div id="mapa" class="mapa-container"></div>
                 <label>Ciudades seleccionadas:</label>
                 <ul id="ciudades-seleccionadas"></ul>
                 <button type="submit" class="btn btn-secondary">Guardar ruta</button>
