@@ -1597,6 +1597,12 @@ header {
   border: 1px solid #2e7d32;
 }
 
+.encurso {
+  background-color: #ffdab0;
+  color: #dd8c12;
+  border: 1px solid #dd8c12;
+}
+
 .completed {
   background-color: #f8d7da;
   color: #c9302c;
