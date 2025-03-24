@@ -10,7 +10,7 @@ const mainContent = document.querySelector('.main-content');
 
 abrirChatGuia.addEventListener('click', function() {
     chatGuiaContainer.style.display = 'flex';
-    chatGuiaMessages.innerHTML = `<div>Chat con Juan Pérez</div>`;
+    chatGuiaMessages.innerHTML = `<div>Chat con GuiaBot</div>`;
     mainContent.style.width = 'calc(100% - 320px)'; // Reducir el ancho del contenedor principal
 });
 
