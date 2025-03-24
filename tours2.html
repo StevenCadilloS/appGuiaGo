@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .tour-card {
+            background-color: #e8f5e9; /* Verde claro */
+        }
+    </style>
 </head>
 <body class="tours-body">
     <header>
@@ -22,25 +27,39 @@
         <div class="auth-buttons logged-in">
             <a href="chat.html" class="btn btn-primary">Chat</a>
             <img src="avatar.jpg" alt="Avatar" class="avatar">
-            <span class="user-name">Juan Pérez</span>  
+            <span class="user-name">Juan Pérez</span>
         </div>
     </header>
 
     <section class="mis-tours">
-        <h2>Mis Tours Finalizados</h2>
+        <h2>Mis Tours Adquiridos</h2>
         <div class="tour-card">
             <img src="assets/ruta1.jpg" alt="Imagen del tour" class="tour-img">
             <div class="tour-info">
                 <h3>Rumbo a Kuélap</h3>
-                <span class="tour-status completed">🔴 Finalizado</span>  
                 <p><strong>Guía:</strong> Juan Pérez</p>
                 <p><strong>Idioma:</strong> Español</p>
                 <p><strong>Fecha y Hora:</strong> 10 de Abril, 8:00 AM - 4:00 PM</p>
                 <p><strong>Precio:</strong> $50</p>
                 <p><strong>Punto de Encuentro:</strong> Plaza principal de Chachapoyas</p>
+                <p><strong>Estado:</strong> En curso</p>
                 <button class="btn detalles-btn" onclick="document.getElementById('detalleRuta').style.display='flex'">Ver detalles</button>
-                <button class="btn calificar-btn" onclick="document.getElementById('modalCalificacion').style.display='flex'">Calificar tour</button>
+                <button class="btn seguir-btn">Seguir tour</button>
             </div>
+            <a href="./tours3.html" id="cambiarEstadoLink" style="
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: #e0f7fa; /* Cambiado a rojo para hacerlo visible */
+                color: black; /* Cambiado a blanco para visibilidad */
+                font-size: 12px; /* Cambiado a un tamaño visible */
+                cursor: pointer;
+                padding: 5px; /* Agregado padding para visibilidad */
+                width: auto; /* Cambiado a auto para ajustar al contenido */
+                height: auto; /* Cambiado a auto para ajustar al contenido */
+                z-index: 1000;">
+                Cambiar Estado
+            </a>
         </div>
     </section>
 
@@ -59,40 +78,8 @@
         </div>
     </div>
 
-    <div id="modalCalificacion" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="document.getElementById('modalCalificacion').style.display='none'">&times;</span>
-            <h3>Calificar Tour</h3>
-            <label for="rating">Puntuación:</label>
-            <select id="rating">
-                <option>⭐</option>
-                <option>⭐⭐</option>
-                <option>⭐⭐⭐</option>
-                <option>⭐⭐⭐⭐</option>
-                <option>⭐⭐⭐⭐⭐</option>
-            </select>
-            <label for="opinion">Opinión:</label>
-            <textarea id="opinion" placeholder="Escribe tu opinión..."></textarea>
-            <button class="btn enviar-btn" onclick="document.getElementById('modalCalificacion').style.display='none'">Enviar</button>
-        </div>
-    </div>
-
     <footer>
         <div class="footer-content">
             <div class="footer-column">
                 <a href="index_actualizado.html" class="footer-logo">GuíaGo</a>
                 <p class="footer-description">Conectamos viajeros con guías locales para experiencias únicas.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Enlaces rápidos</h3>
-                <ul class="footer-links">
-                    <li><a href="index_actualizado.html">Inicio</a></li>
-                    <li><a href="index_actualizado.html#como-funciona">Cómo funciona</a></li>
-                    <li><a href="guias_actualizado.html">Guías</a></li>
-                    <li><a href="contacto_actualizado.html">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>

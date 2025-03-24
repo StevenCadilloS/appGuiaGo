@@ -27,33 +27,20 @@
     </header>
 
     <section class="mis-tours">
-        <h2>Mis Tours Adquiridos</h2>
+        <h2>Mis Tours Finalizados</h2>
         <div class="tour-card">
             <img src="assets/ruta1.jpg" alt="Imagen del tour" class="tour-img">
             <div class="tour-info">
                 <h3>Rumbo a Kuélap</h3>
-                <a href="tours2.html" class="tour-statuspending">🟢 Pendiente</a>  
+                <span class="tour-status completed">🔴 Finalizado</span>  
                 <p><strong>Guía:</strong> Juan Pérez</p>
                 <p><strong>Idioma:</strong> Español</p>
                 <p><strong>Fecha y Hora:</strong> 10 de Abril, 8:00 AM - 4:00 PM</p>
                 <p><strong>Precio:</strong> $50</p>
                 <p><strong>Punto de Encuentro:</strong> Plaza principal de Chachapoyas</p>
                 <button class="btn detalles-btn" onclick="document.getElementById('detalleRuta').style.display='flex'">Ver detalles</button>
+                <button class="btn calificar-btn" onclick="document.getElementById('modalCalificacion').style.display='flex'">Calificar tour</button>
             </div>
-            <a href="./tours2.html" id="cambiarEstadoLink" style="
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                background: #e0f7fa; /* Cambiado a rojo para hacerlo visible */
-                color: black; /* Cambiado a blanco para visibilidad */
-                font-size: 12px; /* Cambiado a un tamaño visible */
-                cursor: pointer;
-                padding: 5px; /* Agregado padding para visibilidad */
-                width: auto; /* Cambiado a auto para ajustar al contenido */
-                height: auto; /* Cambiado a auto para ajustar al contenido */
-                z-index: 1000;">
-                Cambiar Estado
-            </a>
         </div>
     </section>
 
@@ -69,6 +56,24 @@
             <p><strong>Punto de Encuentro:</strong> Plaza principal de Chachapoyas</p>
             <p><strong>Descripción:</strong> Exploración guiada por la ciudadela de Kuélap.</p>
             <p><strong>Itinerario:</strong> Fortaleza de Kuélap, Mirador de Kuélap, Centro de Interpretación</p>
+        </div>
+    </div>
+
+    <div id="modalCalificacion" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modalCalificacion').style.display='none'">&times;</span>
+            <h3>Calificar Tour</h3>
+            <label for="rating">Puntuación:</label>
+            <select id="rating">
+                <option>⭐</option>
+                <option>⭐⭐</option>
+                <option>⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐⭐</option>
+            </select>
+            <label for="opinion">Opinión:</label>
+            <textarea id="opinion" placeholder="Escribe tu opinión..."></textarea>
+            <button class="btn enviar-btn" onclick="document.getElementById('modalCalificacion').style.display='none'">Enviar</button>
         </div>
     </div>
 
