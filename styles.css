@@ -1595,18 +1595,21 @@ header {
   background-color: #d4f8d4;
   color: #2e7d32;
   border: 1px solid #2e7d32;
+  text-decoration: none;
 }
 
 .encurso {
   background-color: #ffdab0;
   color: #dd8c12;
   border: 1px solid #dd8c12;
+  text-decoration: none;
 }
 
 .completed {
   background-color: #f8d7da;
   color: #c9302c;
   border: 1px solid #c9302c;
+  text-decoration: none;
 }
 
 .calificar-btn {
@@ -1700,6 +1703,3 @@ header {
   margin-top: 1rem;
 }
 
-.tour-statuspending{
-  text-decoration: none;
-}
