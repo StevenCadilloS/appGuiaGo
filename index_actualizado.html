@@ -144,5 +144,46 @@
         </div>
     </footer>
     <script src="script2.js"></script>
+
+    <div id="chatbot-button" onclick="toggleChatbot()">
+        <i class="fas fa-comment-alt"></i>
+      </div>
+      
+      <!-- Ventana del chatbot -->
+      <div id="chatbot-window">
+        <div class="chat-header">GuíaBot</div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message user">Hola, me interesa visitar Cusco</div>
+            <div class="message bot">
+              ¡Cusco es un destino mágico! Tenemos <strong>4 guías locales certificados</strong> que ofrecen rutas increíbles como:<br>
+              • Tour al Valle Sagrado<br>
+              • Caminata a la Laguna Humantay<br>
+              • Visita guiada a Machu Picchu<br>
+              ¿Quieres que te recomiende un guía según tu estilo de viaje?
+            </div>
+            <div class="message user">¿Y en Arequipa?</div>
+            <div class="message bot">
+              En Arequipa contamos con <strong>3 guías locales</strong> expertos que ofrecen experiencias como:<br>
+              • City tour por el centro histórico<br>
+              • Ruta del Sillar<br>
+              • Tour al Cañón del Colca<br>
+              Ellos conocen cada rincón y están listos para ayudarte a descubrir lo mejor de la ciudad 😄
+            </div>
+            <div class="message user">¿Cómo los encuentro?</div>
+            <div class="message bot">
+              Puedes buscarlos en la sección <strong>“Guías”</strong> de nuestra app o dejar que yo te recomiende uno según tu destino e idioma preferido 🌍
+            </div>
+        </div>
+      </div>
+
+      <div id="chatbot-button" onclick="toggleChatbot()">💬</div>
+      <div id="chatbot-window" style="display: none; position: fixed; bottom: 100px; right: 20px; background: white; padding: 10px; border: 1px solid #00c8ff;">¡Hola soy el chatbot!</div>
+      <script>
+        function toggleChatbot() {
+          const w = document.getElementById('chatbot-window');
+          w.style.display = w.style.display === 'flex' ? 'none' : 'flex';
+        }
+      </script>  
+      
 </body>
 </html>
