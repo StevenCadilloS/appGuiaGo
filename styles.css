@@ -1854,3 +1854,233 @@
     background-color: #e0f7ff; /* celeste suave */
     align-self: flex-start;
   }
+
+  .metodos-pago {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.pago-btn {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.pago-btn:hover {
+    background-color: #eee;
+}
+
+/* Estilos para la sección de opciones de pago */
+#opciones-pago {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 60%;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+}
+
+#opciones-pago h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.metodos-pago {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.pago-btn {
+  background: white;
+  color: var(--primary-dark);
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--primary-blue);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.pago-btn:hover {
+  background: var(--primary-blue);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el botón "Volver a los detalles" */
+#opciones-pago .btn-secondary {
+  background: var(--gray-300);
+  color: var(--gray-800);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#opciones-pago .btn-secondary:hover {
+  background: var(--gray-400);
+}
+
+/* Estilos para la pasarela de pago */
+.modal-pasarela {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido-pasarela {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-contenido-pasarela h2 {
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal-contenido-pasarela label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: var(--gray-800);
+  font-weight: 500;
+}
+
+.modal-contenido-pasarela input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.modal-contenido-pasarela .btn-comprar {
+  background: var(--primary-green);
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.modal-contenido-pasarela .btn-comprar:hover {
+  background: var(--primary-dark-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-pasarela {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  color: var(--gray-500);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-pasarela:hover {
+  color: var(--primary-dark);
+}
+
+#seleccion-pago, #formularios-pago {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.metodos-pago {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.pago-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  background: white;
+  border: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pago-btn:hover {
+  background: var(--primary-blue);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.formulario-pago {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.qr-code {
+  max-width: 200px;
+  margin: 1rem auto;
+  display: block;
+}
+
+.volver-btn, .volver-metodos-btn {
+  margin-top: 1.5rem;
+  background: var(--gray-300);
+  color: var(--gray-800);
+}
+
+.volver-btn:hover, .volver-metodos-btn:hover {
+  background: var(--gray-400);
+}
+
+/* PayPal container */
+#paypal-button-container {
+  margin: 2rem 0;
+  min-height: 50px;
+}

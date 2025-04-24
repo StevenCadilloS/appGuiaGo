@@ -72,21 +72,88 @@
     <div id="detalleRuta" class="detalle-overlay" style="display: none;">
         <div class="detalle-contenido">
             <span class="close" onclick="cerrarDetalles()">&times;</span>
-            <h3 id="tituloRuta"></h3>
-            <img id="imagenRuta" src="" alt="Mapa de la ruta" class="imagen-detalle">
-            <p><strong>Idioma:</strong> <span id="idiomaRuta"></span></p>
-            <p><strong>Salida:</strong> <span id="salidaRuta"></span></p>
-            <p><strong>Hora Fin:</strong> <span id="horaFinRuta"></span></p>
-            <p><strong>Precio:</strong> <span id="precioRuta"></span></p>
-            <p><strong>Turistas confirmados:</strong> <span id="cuposRuta"></span></p>
-            <p><strong>Descripción:</strong> <span id="descripcionRuta"></span></p>
-            <p><strong>Itinerario:</strong> <span id="itinerarioRuta"></span></p>
-            <p><strong>Punto de Encuentro:</strong> <span id="puntoEncuentroRuta"></span></p>
-            <br>
-            <p><strong>Reservar tour:</strong></p>
-            <div class="detalle-botones">
-                <button class="btn unirse-btn">Grupo compartido</button>
-                <button class="btn privado-btn">Grupo privado</button>
+            <!-- Paso 1: Detalles del tour -->
+            <div id="detalles-tour">
+                <h3 id="tituloRuta"></h3>
+                <img id="imagenRuta" src="" alt="Mapa de la ruta" class="imagen-detalle">
+                <p><strong>Idioma:</strong> <span id="idiomaRuta"></span></p>
+                <p><strong>Salida:</strong> <span id="salidaRuta"></span></p>
+                <p><strong>Hora Fin:</strong> <span id="horaFinRuta"></span></p>
+                <p><strong>Precio:</strong> <span id="precioRuta"></span></p>
+                <p><strong>Turistas confirmados:</strong> <span id="cuposRuta"></span></p>
+                <p><strong>Descripción:</strong> <span id="descripcionRuta"></span></p>
+                <p><strong>Itinerario:</strong> <span id="itinerarioRuta"></span></p>
+                <p><strong>Punto de Encuentro:</strong> <span id="puntoEncuentroRuta"></span></p>
+                <br>
+                <p><strong>Reservar tour:</strong></p>
+                <div class="detalle-botones">
+                    <button class="btn unirse-btn">Grupo compartido</button>
+                    <button class="btn privado-btn">Grupo privado</button>
+                    <button class="btn comprar-btn-detalle">Adquirir viaje</button>
+                </div>
+            </div>
+    
+            <!-- Paso 2: Selección de método de pago -->
+            <div id="seleccion-pago" style="display: none;">
+                <h3>Selecciona tu método de pago</h3>
+                <div class="metodos-pago">
+                    <button class="btn pago-btn" data-metodo="paypal">
+                        <i class="fab fa-paypal"></i> PayPal
+                    </button>
+                    <button class="btn pago-btn" data-metodo="yape">
+                        <img src="assets/yape-logo.png" alt="Yape" style="height: 20px;"> Yape
+                    </button>
+                    <button class="btn pago-btn" data-metodo="bcp">
+                        <img src="assets/bcp-logo.png" alt="BCP" style="height: 20px;"> BCP
+                    </button>
+                </div>
+                <button class="btn btn-secondary volver-btn">Volver a los detalles</button>
+            </div>
+    
+            <!-- Paso 3: Formularios de pago -->
+            <div id="formularios-pago" style="display: none;">
+                <!-- Formulario PayPal -->
+                <div id="formulario-paypal" class="formulario-pago" style="display: none;">
+                    <h3>Pago con PayPal</h3>
+                    <div class="paypal-container" id="paypal-button-container"></div>
+                    <button class="btn btn-secondary volver-metodos-btn">Cambiar método</button>
+                </div>
+    
+                <!-- Formulario Yape -->
+                <div id="formulario-yape" class="formulario-pago" style="display: none;">
+                    <h3>Pago con Yape</h3>
+                    <div class="yape-qr-container">
+                        <img src="assets/yape-qr.png" alt="Código QR Yape" class="qr-code">
+                        <p>Escanea el código QR con Yape para completar tu pago</p>
+                        <p>O transfiere a: <strong>999-888-777</strong></p>
+                    </div>
+                    <button class="btn btn-secondary volver-metodos-btn">Cambiar método</button>
+                </div>
+    
+                <!-- Formulario BCP -->
+                <div id="formulario-bcp" class="formulario-pago" style="display: none;">
+                    <h3>Pago con BCP</h3>
+                    <form id="formulario-tarjeta">
+                        <div class="form-group">
+                            <label for="numero-tarjeta">Número de tarjeta:</label>
+                            <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha-expiracion">Fecha de expiración:</label>
+                            <input type="text" id="fecha-expiracion" placeholder="MM/AA" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre-titular">Nombre del titular:</label>
+                            <input type="text" id="nombre-titular" placeholder="Como aparece en la tarjeta" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pagar ahora</button>
+                        <button type="button" class="btn btn-secondary volver-metodos-btn">Cambiar método</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
